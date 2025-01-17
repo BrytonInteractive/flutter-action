@@ -108,7 +108,7 @@ runs:
           ${{ inputs.channel }}
 
     - name: Cache Flutter
-      uses: actions/cache@v4
+      uses: BrytonInteractive/cache@main
       if: ${{ inputs.cache == 'true' }}
       with:
         path: ${{ steps.flutter-action.outputs.CACHE-PATH }}
@@ -117,7 +117,7 @@ runs:
           ${{ steps.flutter-action.outputs.CACHE-KEY }}
 
     - name: Cache pub dependencies
-      uses: actions/cache@v4
+      uses: BrytonInteractive/cache@main
       if: ${{ inputs.cache == 'true' }}
       with:
         path: ${{ steps.flutter-action.outputs.PUB-CACHE-PATH }}
